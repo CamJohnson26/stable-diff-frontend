@@ -15,7 +15,9 @@ root.render(
       clientId={process.env.REACT_APP_AUTH0_CLIENT_ID || ''}
       authorizationParams={{
         redirect_uri: process.env.REACT_APP_ORIGIN_URL,
+
       }}
+      useRefreshTokens={true} // Fixes https://community.auth0.com/t/silent-authorization-not-working-after-login-signup/37114/5
     >
       <App />
     </Auth0Provider>,
