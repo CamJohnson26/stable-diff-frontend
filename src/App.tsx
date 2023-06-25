@@ -3,10 +3,11 @@ import './App.css';
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
 import UserProfile from "./UserProfile";
-import {useWorkerApi} from "./dataAccess/workerApi/useWorkerApi";
+import {useWorkerApiWriteStableDiff} from "./dataAccess/workerApi/useWorkerApiWriteStableDiff";
 
 function App() {
-  const {loading, data} = useWorkerApi({
+
+  const {loading, data} = useWorkerApiWriteStableDiff({
     url: process.env.REACT_APP_WORKER_API_URL || ''
   });
   return (
@@ -17,7 +18,7 @@ function App() {
         <LogoutButton />
         <UserProfile />
         {
-          loading ? <>Loading</> : <div>{data}</div>
+          loading ? <>Loading</> : <div>{JSON.stringify(data)}</div>
         }
       </header>
     </div>
