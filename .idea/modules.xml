@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../frontend-templates/.idea/frontend-templates.iml" filepath="$PROJECT_DIR$/../frontend-templates/.idea/frontend-templates.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/stable-diff-frontend.iml" filepath="$PROJECT_DIR$/.idea/stable-diff-frontend.iml" />
     </modules>
   </component>
